@@ -1,3 +1,4 @@
+import time
 from cronometro import Cronometro
 
 hora = input("Ingrese la hora en formato HH:MM:SS: ")
@@ -11,4 +12,5 @@ c = Cronometro()
 
 for i in range (total_segundos):
     print(c.hora.valor, ":", c.minuto.valor, ":", c.segundo.valor)
+    time.sleep(1)
     c.avanzar()
