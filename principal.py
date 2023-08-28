@@ -10,7 +10,10 @@ print("La hora ingresada en segundos es:", total_segundos)
 
 c = Cronometro()
 
-for i in range (total_segundos):
-    print(c.hora.valor, ":", c.minuto.valor, ":", c.segundo.valor)
+for i in range(total_segundos):
+    hora_actual = "{:02d}".format(c.hora.valor)
+    minuto_actual = "{:02d}".format(c.minuto.valor)
+    segundo_actual = "{:02d}".format(c.segundo.valor)
     time.sleep(1)
+    print(f"{hora_actual}:{minuto_actual}:{segundo_actual}")
     c.avanzar()
